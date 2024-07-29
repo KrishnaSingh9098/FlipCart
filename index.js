@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 let userRoutes = require ('./routes/user')
 let loginRoutes = require('./routes/login')
-let productRoutes = require('./routes/productRoutes')
+let product = require('./routes/productRoutes')
 
 
 app.get('/',(req,res)=>{
@@ -19,7 +19,7 @@ app.get('/',(req,res)=>{
 
 app.use('/api',userRoutes)
 app.use('/api',loginRoutes)
-app.use('/api',productRoutes)
+app.use('/api',product)
 
 app.listen(3000,()=>{
     console.log("SERVER IS RUNNING IN PORT NO :3000 ")
